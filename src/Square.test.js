@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-node-access */
 import { cleanup, render } from '@testing-library/react';
-import { Square } from './square';
+import { Square } from './Square';
 
 describe('Square', () => {
   let container = null;
