@@ -1,15 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { calculateWinner } from './calculateWinner';
 import './index.css';
-
-function Square(props) {
-  const classNames = ['square', props.win ? 'win' : ''].join(' ');
-  return (
-    <button className={classNames} onClick={props.onClick}>
-      {props.value}
-    </button>
-  );
-}
+import { Square } from './square';
 
 class Board extends React.Component {
   renderSquare(i) {
@@ -73,6 +67,7 @@ class Game extends React.Component {
       xIsNext: !this.state.xIsNext,
       reverseOrder: this.state.reverseOrder,
     });
+    console.log(squares);
   }
 
   toggleOrder() {
@@ -137,25 +132,9 @@ class Game extends React.Component {
 
 // ========================================
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Game />);
-
-function calculateWinner(squares) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return { winner: squares[a], squares: [a, b, c] };
-    }
-  }
-  return null;
-}
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <StrictMode>
+    <Game />
+  </StrictMode>
+);
