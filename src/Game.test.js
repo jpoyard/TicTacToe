@@ -57,7 +57,9 @@ describe(Game.name, () => {
   });
 
   it('should manage display history correctly', () => {
-    playGame(container, [0, 8, 6, 3, 2, 4, 1]);
+    const actual = playGame(container, [0, 8, 6, 3, 2, 4, 1]);
+
+    expect(actual).toMatchSnapshot();
 
     const expectedHistory = [
       'Revenir au début de la partie',

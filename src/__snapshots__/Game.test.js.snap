@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game should manage display history correctly 1`] = `
+<div>
+  <div
+    class="game"
+  >
+    <div
+      class="game-board"
+    >
+      <div>
+        <div
+          class="board-row"
+        >
+          <button
+            class="square win"
+          >
+            X
+          </button>
+          <button
+            class="square win"
+          >
+            X
+          </button>
+          <button
+            class="square win"
+          >
+            X
+          </button>
+        </div>
+        <div
+          class="board-row"
+        >
+          <button
+            class="square"
+          >
+            O
+          </button>
+          <button
+            class="square"
+          >
+            O
+          </button>
+          <button
+            class="square"
+          />
+        </div>
+        <div
+          class="board-row"
+        >
+          <button
+            class="square"
+          >
+            X
+          </button>
+          <button
+            class="square"
+          />
+          <button
+            class="square"
+          >
+            O
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="game-info"
+    >
+      <div
+        class="status"
+      >
+        X a gagné
+      </div>
+      <button
+        class="toggleHistoryBtn"
+      >
+        Order
+      </button>
+      <ol>
+        <li
+          class=""
+        >
+          <button>
+            Revenir au début de la partie
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            Revenir au tour n°1 {row: 0, column: 0}
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            Revenir au tour n°2 {row: 2, column: 2}
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            Revenir au tour n°3 {row: 2, column: 0}
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            Revenir au tour n°4 {row: 1, column: 0}
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            Revenir au tour n°5 {row: 0, column: 2}
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            Revenir au tour n°6 {row: 1, column: 1}
+          </button>
+        </li>
+        <li
+          class="active"
+        >
+          <button>
+            Revenir au tour n°7 {row: 0, column: 1}
+          </button>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+`;
