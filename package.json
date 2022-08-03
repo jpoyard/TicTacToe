@@ -41,7 +41,11 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!./node_modules/"
+      "!node_modules/"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "src/index.*"
     ],
     "coverageReporters": [
       "cobertura",
